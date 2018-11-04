@@ -1,0 +1,5 @@
+aliyun-python-sdk-alidns==2.0.7
+aliyun-python-sdk-core-v3==2.9.4
+aliyun-python-sdk-ecs==4.12.0
+requests==2.20.0
+yagmail==0.11.214
