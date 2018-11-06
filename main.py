@@ -25,6 +25,7 @@ def main():
     if ipmonitor.isChange():
         ip = ipmonitor.current_ip
         domain_tool.change_ip(ip)
+        ipmonitor.saveCurrentIP()
         dingding_client.send_markdown('IP 更变通知', '> **机器ip变更为'+ip)
         mail_client.send(to=config.get("mail", "receivers").strip().split(','),
                          subject="IP 更变通知", contents=["IP 地址更变为" + ip])

@@ -42,7 +42,7 @@ class Monitor():
         self.getCurrentIP()
         if self.last_ip != self.current_ip:
             print("[{}] : IP地址更变 {} {} ".format(str(datetime.now()), self.last_ip, self.current_ip))
-            self.saveCurrentIP()
+            # self.saveCurrentIP()
             return True
         return False
 

@@ -41,7 +41,7 @@ class DomainTool:
         r = DescribeDomainRecordsRequest.DescribeDomainRecordsRequest()
         r.set_DomainName(self.domain)
         res = self.client.do_action_with_exception(r)
-        records = json.loads(res)['DomainRecords']['Record']
+        records = json.loads(res.decode())['DomainRecords']['Record']
         for record in records:
             if record['Type'] == 'A':
                 self.records.append(record)
