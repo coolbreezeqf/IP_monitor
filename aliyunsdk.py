@@ -30,10 +30,6 @@ from aliyunsdkalidns.request.v20150109 import UpdateDomainRecordRequest
 
 import json
 
-class AliyunClient:
-    def __init__(self, accesskeyid, secret):
-        self.client = AcsClient(accesskeyid, secret)
-
 
 class DomainTool:
     def __init__(self, client, domain):

@@ -5,7 +5,7 @@ import os
 
 from dingdingsdk import DingdingClient
 from mail import MailClient
-from aliyunsdk import AliyunClient, DomainTool
+from aliyunsdk import AcsClient, DomainTool
 from ip_monitor import Monitor
 
 DIR_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -15,7 +15,7 @@ config.read(config_path)
 
 dingding_client = DingdingClient(config.get("dingding", "token"))
 mail_client = MailClient(**config["mail"])
-alilyun_client = AliyunClient(config.get("aliyun", "accesskeyid"),
+alilyun_client = AcsClient(config.get("aliyun", "accesskeyid"),
                               config.get("aliyun", "secret"))
 domain_tool = DomainTool(alilyun_client, config.get("aliyun", "domain"))
 ipmonitor = Monitor()
